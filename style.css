@@ -134,6 +134,21 @@ footer {
     
 
 
+
+    @media (max-width: 768px) {
+        .packages-container {
+            flex-direction: column; /* Stack the packages vertically on smaller screens */
+        }
+    
+        .standard-package,
+        .personalized-package {
+            width: 100%; /* Take up the full width of the container on smaller screens */
+        }
+    }
+
+
+
+
 .center-container {
         display: flex;
         justify-content: center;
