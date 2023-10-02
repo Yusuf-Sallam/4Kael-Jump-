@@ -148,10 +148,65 @@ footer {
             width: 90%; /* Take up the full width of the container on smaller screens */
             
         }
+
+                    /* Style the button */
+        .custom-button {
+            margin-top: 10px;
+            margin-bottom: 10px;
+            display: inline-block;
+            padding: 15px 30px;
+            background-color: rgb(255, 0, 0);
+            color: black;
+            border: none;
+            border-radius: 10px; /* Add rounded corners for soft edges */
+            text-align: center;
+            text-decoration: none;
+            font-size: 20px;
+            cursor: pointer;
+            font-family:Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        /* Style the button on hover for a slight effect */
+        .custom-button:hover {
+            background-color: #ffffff; /* Darken the button color */
+        }
+
+
+        .slider-container {
+            text-align: center;
+            margin: 20px;
+        }
+
+        .gif-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        .gif {
+            max-width: 250px; /* Set the desired maximum width for the GIFs */
+            height: auto;
+            border: 2px solid white; /* Add a white border */
+        }
+
+        .navigation {
+            margin-top: 20px;
+        }
+
+        .navigation-circle {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            background-color: #333;
+            border-radius: 50%;
+            margin: 0 5px;
+            cursor: pointer;
+        }
+
+
     }
-
-
-
+    
 
 .center-container {
         display: flex;
