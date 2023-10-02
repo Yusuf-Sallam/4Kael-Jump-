@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4Kael Personal</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        .tabs {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .tab {
+            background-color: #333;
+            padding: 10px 20px;
+            border-radius: 10px 10px 0 0;
+            cursor: pointer;
+        }
+
+        .tab.active {
+            background-color: #555;
+        }
+
+        .pricing-table {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .plan {
+            background-color: #333;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            flex-grow: 1;
+            margin: 10px;
+            border: 2px solid #fff; /* Add white border */
+        }
+
+        .plan h2 {
+            font-size: 24px;
+            font-family:Verdana, Geneva, Tahoma, sans-serif;
+
+        }
+
+        h2{
+            color: white;
+            text-align: center;
+        }
+
+        .plan h3 {
+            font-size: 18px;
+            text-align: center;
+            font-family:Verdana, Geneva, Tahoma, sans-serif;
+            color: #ffffff;
+        }
+
+        .price {
+            font-family:Verdana, Geneva, Tahoma, sans-serif;
+            color: white;
+            font-size: 36px;
+        }
+
+        .duration {
+            font-size: 16px;
+            font-family:Verdana, Geneva, Tahoma, sans-serif;
+            color: white;
+            margin-top: 10px;
+        }
+
+        .centered-text {
+            text-align: center;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-top: 20px;
+        }
+
+        .custom{
+            color: white;
+            text-align: center;
+            font-family:Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            background-color: #ffffff;
+            color: black;
+            margin: 10px;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        strong {
+            font-size: 1.5rem;
+            color: #333;
+        }
+
+        p {
+            color: #666;
+            margin-top: 10px;
+        }
+
+        .text-container {
+            margin: 20px; /* Add space around the container */
+            padding: 10px; /* Add padding inside the container (optional) */
+            border: 1px solid #ccc; /* Add a border around the container (optional) */
+        }
+
+        .red{
+            color: red;
+        }
+
+        .white{
+            color: white;
+        }
+
+        .custom-font {
+            font-family:Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        .packages-container {
+        display: flex;
+        justify-content: space-between;
+        background-color: #000; /* Set the background color of the entire container to black */
+        text-align: center;    
+    }
+    
+    .package {
+        flex: 1;
+        padding: 20px;
+        border: 2px solid #fff; /* Adding a white border to the packages for visibility */
+        margin: 10px;
+        background-color: #000; /* Set the background color of the packages to black */
+        }
+
+    .adjust {
+        margin-top: 0px;
+        margin-bottom: 0px;
+        padding: 0;
+    }
+    .container {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .section {
+            flex: 0 0 calc(30% - 20px); /* Adjust the width as needed */
+            margin: 10px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            cursor: pointer;
+            text-align: center;
+        }
+
+        .section:hover {
+            background-color: #f0f0f0;
+        }
+
+        .content {
+            display: none;
+        }
+    
+        h4{
+            color: #b6b6b6;
+        }
+
+        
+        /* Style the navigation bar */
+        .navbar {
+            background-color: #000; /* Black background color */
+            overflow: hidden;
+        }
+
+        /* Navigation bar links */
+        .navbar a {
+            float: left;
+            font-size: 16px;
+            color: #fff; /* White text color */
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        /* Style the dropdown container */
+        .dropdown {
+            float: left;
+            overflow: hidden;
+        }
+
+        /* Style the dropdown button */
+        .dropdown .dropbtn {
+            font-size: 16px;
+            border: none;
+            outline: none;
+            color: #fff;
+            background-color: inherit;
+            padding: 14px 16px;
+            margin: 0;
+        }
+
+        /* On hover, the dropdown button will change color */
+        .dropdown:hover .dropbtn {
+            background-color: #333; /* Darker shade of black */
+        }
+
+        /* Style the dropdown content (hidden by default) */
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #000;
+            min-width: 160px;
+            z-index: 1;
+        }
+
+        /* Style the dropdown links */
+        .dropdown-content a {
+            float: none;
+            color: #fff;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+
+        /* On hover, the dropdown links will change color */
+        .dropdown-content a:hover {
+            background-color: #333; /* Darker shade of black */
+        }
+
+        /* Show the dropdown content when the dropdown button is hovered over */
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .center-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .custom-button {
+            margin-top: 10px;
+            margin-bottom: 10px;
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: rgb(255, 0, 0);
+            color: black;
+            border: none;
+            border-radius: 10px; /* Add rounded corners for soft edges */
+            text-align: center;
+            text-decoration: none;
+            font-size: 16px;
+            cursor: pointer;
+            font-family:Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        hr {
+            border: none; /* Remove the default border */
+            background-color: white; /* Set the background color to white */
+            height: 2px; /* Adjust the height of the line as needed */
+            margin: 10px 0; /* Add some vertical spacing */
+        }
+        
+        /* Global styles */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #000000;
+            color: white;
+            margin: 0;
+            padding: 15px;            
+            font-family:Verdana, Geneva, Tahoma, sans-serif;
+        }
+ 
+
+        header {
+            text-align: center;
+            padding: 20px;
+        }
+
+        main {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        section {
+            margin-bottom: 40px;
+            display: none;
+        }
+
+
+        .step-icons {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .step-icons i {
+            font-size: 24px;
+            margin: 0 10px;
+            cursor: pointer;
+            border: 2px solid transparent; /* Add border to icons */
+            border-radius: 50%; /* Make icons circular */
+            padding: 5px;
+        }
+
+        .step-icons i.active {
+            border-color: red; /* Red border for active (clicked) icons */
+        }
+
+        /* Additional styling for sections, links, buttons, etc. can be added as needed */
+
+        footer {
+            text-align: center;
+            background-color: #333;
+            padding: 10px;
+        }
+
+        h5 {
+            color: white;
+            text-align: center;
+            font-size: 10px;
+        }
+
+        .black{
+            color: black;
+        }        
+        .yup {
+                display: flex;
+                justify-content: space-between;
+            }
+
+              /* Style the button on hover for a slight effect */
+        .custom-button:hover {
+            background-color: #ffffff; /* Darken the button color */
+        }
+
+        .image {
+                width: 120px; /* Set the desired width for your image */
+                height: auto; /* Maintain aspect ratio */
+                margin-right: 30px; /* Add some space between the image and text */
+            }
+
+        h6{
+            text-align: center;
+            font-size: 14px;
+        }
+
+        footer {
+            background-color: #000000;
+            color: #fff;
+            padding: 7px;
+            text-align: center;
+        }
+
+        .contact-info a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .social-links a {
+            margin: 0 10px;
+            display: inline-block;
+        }
+
+        .social-links img {
+            width: 20px;
+            height: 20px;
+            border: none;
+        }
+
+        .social-links a:hover img {
+            opacity: 0.8;
+        }
+
+  
+    </style>
+</head>
+<body>
+
+    <div class="yup">
+    <div class="navbar">
+        <a href="index.html">Home</a>
+        <div class="dropdown">
+            <button class="dropbtn">Services</button>
+            <div class="dropdown-content" class="custom-font">
+                <a href="standard_learn.html">Standard</a>
+                <a href="personal_learn.html">Personalized</a>
+                <a href="1on1_learn.html">1-on-1</a>
+            </div>
+        </div>
+        <a href="#">Contact</a>
+    </div>
+    
+    
+    <!-- Main Picture. -->
+    <div class="centered-text">
+        <img src="yup.png" width="100" height="100" >
+    </div>
+    </div>
+    
+    <!-- Main Text. -->
+    <div class="custom">
+    <h2>4Kael <span class="red">Personalized </span>Program</h2>
+    </div>
+    
+    <!-- Get Started Today! Button. -->
+    <div class="center-container" >
+    <button class="custom-button" id="getStarted"><b>Get Started!</b></butto >
+    </div>   
+    
+    <hr>
+    
+    <h2><span class="red"> Introduction: <span></h2>
+    <p class="white">Welcome to our 4Kael Personalized Jump Program! We're here to 
+        help you take your jumping abilities to the next level. Here's a 
+        step-by-step guide on how our program works!
+    </p>
+
+        <h5 class="red"><em>click below to find out!</em></h5>
+        <hr>
+        <main>
+        <div class="step-icons">
+            <i class="fas fa-rocket" id="icon1"></i>
+            <i class="fas fa-rocket" id="icon2"></i>
+            <i class="fas fa-rocket" id="icon3"></i>
+            <i class="fas fa-rocket" id="icon4"></i>
+            <i class="fas fa-rocket" id="icon5"></i>
+        </div>
+        <section id="step1">
+            <h2>Step 1: Metric Assessment</h2>
+            
+            <div class="container">
+                <img src="form.jpg" alt="Form Image" class="image" width="230" height="200">
+                <p class="white">To embark on this journey, please take a moment to 
+                    fill out our <span class="red">Metric Assessment Form</span>. This essential initial step 
+                    guarantees that we can slightly customize your program to perfectly align 
+                    with your individual requirements and aspirations. We will gather 
+                    information such as your <span class="red"> age</span>, <span class="red"></span><span class="red">height</span>, 
+                    <span class="red">weight</span>, <span class="red">maximum squat</span>, and <span class="red">more</span>.
+                </p>
+                </div>
+        </section>
+        <section id="step2">
+            <h2>Step 2: Phone Call</h2>
+            <div class="container"> 
+            <img src="phone.png" alt="Form Image" class="image" width="230" height="200">
+            <p class="white">
+                Schedule a <span class="red">brief 15-minute phone call with Kael</span>. During this call, <span class="red"> we'll get to know you better</span>, 
+                 discuss your <span class="red"> vertical jump goals</span>, and understand any <span class="red"> specific requirements or preferences</span> you have.
+            </p>
+        </div>
+
+        <h6 class="white"><em>We combine these three strategies to craft a program 
+            tailored to your metrics and physique. Click below to learn more!</em></h3>
+        <div class="container">
+            <div class="section" onclick="toggleSection('section1')">
+                <h4>Power-Based</h4>
+                <div id="section1" class="content">
+                    <p class="custom-font white">
+                        <ul class="custom-list">
+                          <li class="custom-font"><b>Focus:</b> Emphasizes building power as the foundation for improving your vertical jump.</li>
+                          <li class="custom-font"><b>Ideal for:</b> Individuals looking to increase their vertical leap through power training.</li>
+                        </ul>
+                      </p>
+                </div>
+            </div>
+        
+            <div class="section" onclick="toggleSection('section2')">
+                <h4>Jumping Technique</h4>
+                <div id="section2" class="content">
+                    <p class="custom-font white">
+                        <ul class="custom-list">
+                            <li class="custom-font"><b>Focus:</b> We prioritize perfecting your jumping form and technique to boost your vertical leap.</li>
+                            <li class="custom-font"><b>Ideal for:</b> Tailored for individuals aiming to increase their vertical jump by refining their jumping form and technique.</li>
+                          </ul>
+                      </p>
+                </div>
+            </div>
+        
+            <div class="section" onclick="toggleSection('section3')">
+                <h4>Explosiveness</h4>
+                <div id="section3" class="content">
+                    <p class="custom-font white">
+                        <ul class="custom-list">
+                          <li class="custom-font"><b>Focus:</b> Concentrates on explosive exercises to rapidly enhance your vertical jump.</li>
+                          <li class="custom-font"><b>Ideal for:</b> Those wanting quick gains in jump height through explosive training.</li>
+                        </ul>
+                      </p>
+                </div>
+            </div>
+
+        </div>
+
+        </section>
+        <section id="step3">
+            <h2>Step 3: Payment Plan</h2>
+            <p class="white">
+                <span class="red"><b>Subscription Plan:</b></span> PDF will be sent to 
+                your email at the beginning of each month.
+            </p>
+            <p class="white">                
+                <span class="red"><b>One-Time Plan:</b></span> PDF will be sent to 
+                your email at the once payment has been completed.
+            </p>
+            <br>
+            <div class="tabs">
+                <div class="tab active" onclick="showMonthly()"><h4><span class="white">Subscription Plan</span></h4></div>
+                <div class="tab" onclick="showOneTime()"><h4><span class="white">One-Time Plan</span></h4></div>
+                </div>
+                <div class="pricing-table" id="monthlyPlans">
+                <div class="plan">
+                    <h3><span class="white">Monthly</span></h3>
+                    <div class="price" >$29.99</div>
+                    <div class="duration">per month</div>
+                </div>
+                <div class="plan">
+                    <h3><span class="white">Annual</span></h3>
+                    <div class="price"><s>$399.99</s>          $299.99</div>
+                    <div class="duration">per year</div>
+                </div>
+                </div>
+                <div class="pricing-table" id="oneTimePlans" style="display: none;">
+                <div class="plan">
+                    <h3><span class="white">10-week</span></h3>
+                    <div class="price">$79.99</div>
+                    <div class="duration">one-time</div>
+                </div>
+                <div class="plan">
+                    <h3><span class="white">14-week</span></h3>
+                    <div class="price">$109.99</div>
+                    <div class="duration">one-time</div>
+                </div>
+                <div class="plan">
+                    <h3><span class="white">18-week</span></h3>
+                    <div class="price">$139.99</div>
+                    <div class="duration">one-time</div>
+                </div>
+                </div>
+            </section>
+        <section id="step4">
+            <h2>Step 4: Receive Your Program</h2>
+
+            <div class="container">
+                <img src="download.png" alt="Form Image" class="image" width="300" height="200">
+                
+                <p class="white">Program materials will be sent <span class="red">via email</span> 
+                    in the form of a downloadable PDF. 
+                    <br>
+                    <br> 
+                    <b class="red">One-time Purchase: </b>Immediate access 
+                    <br> 
+                    <b class="red">Subscriptions: </b>Access begining of every month 
+
+                    </p>
+                </div>
+        </section>
+
+        <section id="step5">
+        <h2>Step 5: Achieve Your Goals!</h2>
+        <p class="white">Stick with our program for great results! 
+            You'll jump higher, move better, and become a better athlete. 
+            Share your success stories to inspire others. 
+            </p>
+            <p class="white">Ready to get started? Take the Metric 
+                Assessment and make your payment to join us on your 
+                jump journey!
+            </p>
+
+                <!-- Get Started Today! Button. -->
+            <div class="center-container" >
+                <button class="custom-button" id="getStarted_1"><b>Get Started!</b></butto >
+            </div>   
+    
+        </section>
+    </main>    
+
+    <hr>
+    <footer>
+        <div class="contact-info" >
+            <p class="white">Contact Email: <a href="mailto:4kael.business@gmail.com" class="custom-font">4kael.business@gmail.com</a></p>
+        </div>
+        <div class="social-links">
+            <a href="https://www.instagram.com/4kael/?hl=en" target="_blank"><img src="ig.png" alt="Instagram"></a>
+            <a href="https://www.youtube.com/channel/UCydBS5LuedqiAwosJEw_Ueg" target="_blank"><img src="yt.png" alt="YouTube"></a>
+            <a href="https://www.tiktok.com/@4kael_" target="_blank"><img src="ti.png" alt="TikTok"></a>
+        </div>
+    </footer>
+    <hr>
+
+        
+    <script>
+            // JavaScript function to toggle the visibility of content
+        function toggleSection(sectionId) {
+        var content = document.getElementById(sectionId);
+        if (content.style.display === "none") {
+            content.style.display = "block";
+        } else {
+            content.style.display = "none";
+        }
+        }
+
+        document.getElementById("getStarted").addEventListener("click", function() {
+        // Redirect to another HTML file when the button is clicked
+        window.location.href = "personal_purchase.html";
+        });
+
+        document.getElementById("getStarted_1").addEventListener("click", function() {
+        // Redirect to another HTML file when the button is clicked
+        window.location.href = "personal_purchase.html";
+        });
+
+        const sections = document.querySelectorAll("section");
+        const icons = document.querySelectorAll(".step-icons i");
+
+        icons.forEach((icon, index) => {
+            icon.innerHTML = index + 1; // Set the step number inside the rocket
+            icon.addEventListener("click", () => {
+                sections.forEach((section) => {
+                    section.style.display = "none";
+                });
+                sections[index].style.display = "block";
+                icons.forEach((icon) => {
+                    icon.classList.remove("active");
+                });
+                icon.classList.add("active");
+            });
+        });
+
+        sections[0].style.display = "block";
+        icons[0].classList.add("active");
+
+        function showMonthly() {
+            document.getElementById("monthlyPlans").style.display = "flex";
+            document.getElementById("oneTimePlans").style.display = "none";
+            document.querySelector(".tab.active").classList.remove("active");
+            document.querySelectorAll(".tab")[0].classList.add("active");
+        }
+
+        function showOneTime() {
+            document.getElementById("monthlyPlans").style.display = "none";
+            document.getElementById("oneTimePlans").style.display = "flex";
+            document.querySelector(".tab.active").classList.remove("active");
+            document.querySelectorAll(".tab")[1].classList.add("active");
+        }
+
+        // Show Monthly Plans by default
+        showMonthly();
+</script>
+</body>
+</html>

@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4Kael Standard</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        .tabs {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .tab {
+            background-color: #333;
+            padding: 10px 20px;
+            border-radius: 10px 10px 0 0;
+            cursor: pointer;
+        }
+
+        .tab.active {
+            background-color: #555;
+        }
+
+        .pricing-table {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .plan {
+            background-color: #333;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            flex-grow: 1;
+            margin: 10px;
+            border: 2px solid #fff; /* Add white border */
+        }
+
+        .plan h2 {
+            font-size: 24px;
+            font-family:Verdana, Geneva, Tahoma, sans-serif;
+
+        }
+
+        h2{
+            color: white;
+            text-align: center;
+        }
+
+        .plan h3 {
+            font-size: 18px;
+            text-align: center;
+            font-family:Verdana, Geneva, Tahoma, sans-serif;
+            color: #ffffff;
+        }
+
+        .price {
+            font-family:Verdana, Geneva, Tahoma, sans-serif;
+            color: white;
+            font-size: 36px;
+        }
+
+        .duration {
+            font-size: 16px;
+            font-family:Verdana, Geneva, Tahoma, sans-serif;
+            color: white;
+            margin-top: 10px;
+        }
+
+        .centered-text {
+            text-align: center;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-top: 20px;
+        }
+
+        .custom{
+            color: white;
+            text-align: center;
+            font-family:Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            background-color: #ffffff;
+            color: black;
+            margin: 10px;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        strong {
+            font-size: 1.5rem;
+            color: #333;
+        }
+
+        p {
+            color: #666;
+            margin-top: 10px;
+        }
+
+        .text-container {
+            margin: 20px; /* Add space around the container */
+            padding: 10px; /* Add padding inside the container (optional) */
+            border: 1px solid #ccc; /* Add a border around the container (optional) */
+        }
+
+        .red{
+            color: red;
+        }
+
+        .white{
+            color: white;
+        }
+
+        .custom-font {
+            font-family:Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        .packages-container {
+        display: flex;
+        justify-content: space-between;
+        background-color: #000; /* Set the background color of the entire container to black */
+        text-align: center;    
+    }
+    
+    .package {
+        flex: 1;
+        padding: 20px;
+        border: 2px solid #fff; /* Adding a white border to the packages for visibility */
+        margin: 10px;
+        background-color: #000; /* Set the background color of the packages to black */
+        }
+
+    .adjust {
+        margin-top: 0px;
+        margin-bottom: 0px;
+        padding: 0;
+    }
+    .container {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .section {
+            flex: 0 0 calc(30% - 20px); /* Adjust the width as needed */
+            margin: 10px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            cursor: pointer;
+            text-align: center;
+        }
+
+        .section:hover {
+            background-color: #f0f0f0;
+        }
+
+        .content {
+            display: none;
+        }
+    
+        h4{
+            color: #b6b6b6;
+        }
+
+        
+        /* Style the navigation bar */
+        .navbar {
+            background-color: #000; /* Black background color */
+            overflow: hidden;
+        }
+
+        /* Navigation bar links */
+        .navbar a {
+            float: left;
+            font-size: 16px;
+            color: #fff; /* White text color */
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        /* Style the dropdown container */
+        .dropdown {
+            float: left;
+            overflow: hidden;
+        }
+
+        /* Style the dropdown button */
+        .dropdown .dropbtn {
+            font-size: 16px;
+            border: none;
+            outline: none;
+            color: #fff;
+            background-color: inherit;
+            padding: 14px 16px;
+            margin: 0;
+        }
+
+        /* On hover, the dropdown button will change color */
+        .dropdown:hover .dropbtn {
+            background-color: #333; /* Darker shade of black */
+        }
+
+        /* Style the dropdown content (hidden by default) */
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #000;
+            min-width: 160px;
+            z-index: 1;
+        }
+
+        /* Style the dropdown links */
+        .dropdown-content a {
+            float: none;
+            color: #fff;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+
+        /* On hover, the dropdown links will change color */
+        .dropdown-content a:hover {
+            background-color: #333; /* Darker shade of black */
+        }
+
+        /* Show the dropdown content when the dropdown button is hovered over */
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .center-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        hr {
+            border: none; /* Remove the default border */
+            background-color: white; /* Set the background color to white */
+            height: 2px; /* Adjust the height of the line as needed */
+            margin: 10px 0; /* Add some vertical spacing */
+        }
+        
+        /* Global styles */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #000000;
+            color: white;
+            margin: 0;
+            padding: 15px;            
+            font-family:Verdana, Geneva, Tahoma, sans-serif;
+        }
+ 
+        .containers {
+        display: flex;
+        align-items: center; /* Vertically align the content */
+        }
+
+        header {
+            text-align: center;
+            padding: 20px;
+        }
+
+        main {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        section {
+            margin-bottom: 40px;
+            display: none;
+        }
+
+
+        .step-icons {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .step-icons i {
+            font-size: 24px;
+            margin: 0 10px;
+            cursor: pointer;
+            border: 2px solid transparent; /* Add border to icons */
+            border-radius: 50%; /* Make icons circular */
+            padding: 5px;
+        }
+
+        .step-icons i.active {
+            border-color: red; /* Red border for active (clicked) icons */
+        }
+
+        /* Additional styling for sections, links, buttons, etc. can be added as needed */
+
+        footer {
+            text-align: center;
+            background-color: #000000;
+            padding: 10px;
+        }
+
+        h5 {
+            color: white;
+            text-align: center;
+            font-size: 10px;
+        }
+
+        .black{
+            color: black;
+        }
+
+        .buy-button {
+            margin-top: 20px;
+            background-color: #555;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .buy-button:hover {
+            background-color: #333;
+        }
+
+        .contact-info a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .social-links a {
+            margin: 0 10px;
+            display: inline-block;
+        }
+
+        .social-links img {
+            width: 20px;
+            height: 20px;
+            border: none;
+        }
+
+        .social-links a:hover img {
+            opacity: 0.8;
+        }
+
+        .slider-container {
+        text-align: center;
+        margin: 20px;
+    }
+
+    
+.slider-container {
+        text-align: center;
+        margin: 20px;
+    }
+
+    .gif-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+    }
+    .gif {
+        max-width: 200px; /* Set the desired maximum width for the GIFs */
+        height: auto;
+        border: 2px solid white; /* Add a white border */
+    }
+    .navigation {
+        margin-top: 20px;
+    }
+
+    .navigation-circle {
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        background-color: #333;
+        border-radius: 50%;
+        margin: 0 5px;
+        cursor: pointer;
+    }
+
+    .yup {
+            display: flex;
+            justify-content: space-between;
+        }
+
+
+    </style>
+</head>
+<body>
+
+    <div class="yup">
+    <div class="navbar">
+        <a href="index.html">Home</a>
+        <div class="dropdown">
+            <button class="dropbtn">Services</button>
+            <div class="dropdown-content" class="custom-font">
+                <a href="standard_learn.html">Standard</a>
+                <a href="personal_learn.html">Personalized</a>
+                <a href="1on1_learn.html">1-on-1</a>
+            </div>
+        </div>
+        <a href="#">Contact</a>
+    </div>
+    
+    
+    <!-- Main Picture. -->
+    <div class="centered-text">
+        <img src="yup.png" width="100" height="100" >
+    </div>
+    </div>
+    
+    <!-- Main Text. -->
+    <div class="custom">
+    <h2>4Kael <span class="red">Standard </span>Program</h2>
+    </div>
+    
+
+    
+    <hr>
+    
+        <main>
+        <div class="step-icons">
+            <i class="fas fa-rocket" id="icon1"></i>
+            <i class="fas fa-rocket" id="icon2"></i>
+            <i class="fas fa-rocket" id="icon3"></i>
+        </div>
+        <section id="step1">
+            <h2>Step 1: Metric Assessment</h2>
+            <div id="ff-compose"></div>
+            <script async defer src="https://formfacade.com/include/102452761580912996464/form/1FAIpQLSfQ8d6P7bzusngSCyDy5QoOdv5uYkrsRfTSgfd0wBWWncciPg/classic.js?div=ff-compose"></script>        
+        </section>
+        <section id="step2">
+            <h2>Step 2: Payment Plan</h2>
+
+            <div class="tabs">
+                <div class="tab active" onclick="showMonthly()"><h4 class="white">Subscription Plan</h4></div>
+                <div class="tab" onclick="showOneTime()"><h4 class="white">One-Time Plan</h4></div>
+            </div>
+            
+            <div class="pricing-table" id="monthlyPlans">
+                <div class="plan">
+                    <h3><span class="white">Monthly</span></h3>
+                    <div class="price">$19.99</div>
+                    <div class="duration">per month</div>
+                    <button class="buy-button" id="buy1">Buy Now</button>
+                </div>
+                <div class="plan">
+                    <h3><span class="white">Annual</span></h3>
+                    <div class="price"><s>$239.99</s>          $199.99</div>
+                    <div class="duration">per year</div>
+                    <button class="buy-button" id="buy2">Buy Now</button>
+                </div>
+            </div>
+            <div class="pricing-table" id="oneTimePlans" style="display: none;">
+                <div class="plan">
+                    <h3><span class="white">10-week</span></h3>
+                    <div class="price">$49.99</div>
+                    <div class="duration">one-time</div>
+                    <button class="buy-button" id="buy3">Buy Now</button>
+                </div>
+                <div class="plan">
+                    <h3 class="white">14-week</span></h3>
+                    <div class="price">$69.99</div>
+                    <div class="duration">one-time</div>
+                    <button class="buy-button" id="buy4">Buy Now</button>
+                </div>
+                <div class="plan">
+                    <h3><span class="white">18-week</span></h3>
+                    <div class="price">$89.99</div>
+                    <div class="duration">one-time</div>
+                    <button class="buy-button" id="buy5">Buy Now</button>
+                </div>
+            </div>
+
+        </section>
+        <section id="step3">
+            <h1 class="white">Congrats!</h1>
+            <div class="centered-text">           
+            <p class="white" >Thank you for choosing our 4Kael Standard Program!</p>
+            <p class="white">Here's what to expect next:</p>
+            </div>
+            <div class="yup">
+                <div class="slider-container">
+                    <div class="gif-container">
+                        <!-- GIFs will be displayed here -->
+                    </div>
+                    <div class="navigation">
+                        <!-- Navigation circles will be added here dynamically using JavaScript -->
+                    </div>
+                </div>
+
+                <ul class="custom-list">
+                    <li class="custom-font"><b>Check your email:</b> Look for a confirmation email containing the course PDF.</li>
+                    <li class="custom-font"><b>Download and prepare:</b> Review the PDF to prepare for the course content.</li>
+                    <li class="custom-font"><b>Engage and ask questions:</b> Join our community below and reach out if you need help.</li>
+                </ul>
+                </div>
+
+            </section>
+        <section id="step4">
+            <h2>Step 4: Receive Your Program</h2>
+            <p></p>
+        </section>
+        <section id="step5">
+            <h2>Step 5: Start Training</h2>
+            <p></p>
+        </section>
+        <section id="step6">
+            <h2>Step 6: Achieve Your Goals</h2>
+            <p</p>   
+        </section>
+    </main>    
+    
+    <!-- Footer -->
+    <hr>
+    <footer>
+        <div class="contact-info" >
+            <p class="white">Contact Email: <a href="mailto:4kael.business@gmail.com" class="custom-font">4kael.business@gmail.com</a></p>
+        </div>
+        <div class="social-links">
+            <a href="https://www.instagram.com/4kael/?hl=en" target="_blank"><img src="ig.png" alt="Instagram"></a>
+            <a href="https://www.youtube.com/channel/UCydBS5LuedqiAwosJEw_Ueg" target="_blank"><img src="yt.png" alt="YouTube"></a>
+            <a href="https://www.tiktok.com/@4kael_" target="_blank"><img src="ti.png" alt="TikTok"></a>
+        </div>
+    </footer>
+    <hr>
+
+    <script>
+            // JavaScript function to toggle the visibility of content
+        function toggleSection(sectionId) {
+        var content = document.getElementById(sectionId);
+        if (content.style.display === "none") {
+            content.style.display = "block";
+        } else {
+            content.style.display = "none";
+        }
+        }
+
+        const sections = document.querySelectorAll("section");
+        const icons = document.querySelectorAll(".step-icons i");
+
+        icons.forEach((icon, index) => {
+            icon.innerHTML = index + 1; // Set the step number inside the rocket
+            icon.addEventListener("click", () => {
+                sections.forEach((section) => {
+                    section.style.display = "none";
+                });
+                sections[index].style.display = "block";
+                icons.forEach((icon) => {
+                    icon.classList.remove("active");
+                });
+                icon.classList.add("active");
+            });
+        });
+
+        sections[0].style.display = "block";
+        icons[0].classList.add("active");
+
+        function showMonthly() {
+            document.getElementById("monthlyPlans").style.display = "flex";
+            document.getElementById("oneTimePlans").style.display = "none";
+            document.querySelector(".tab.active").classList.remove("active");
+            document.querySelectorAll(".tab")[0].classList.add("active");
+        }
+
+        function showOneTime() {
+            document.getElementById("monthlyPlans").style.display = "none";
+            document.getElementById("oneTimePlans").style.display = "flex";
+            document.querySelector(".tab.active").classList.remove("active");
+            document.querySelectorAll(".tab")[1].classList.add("active");
+        }
+
+        // Show Monthly Plans by default
+        showMonthly();
+        
+        // Payment 1
+        document.getElementById("buy1").addEventListener("click", function () {
+        window.open("https://buy.stripe.com/cN2g0Ldej3m15wY289", "_blank");
+        });
+
+        //  Payment 2
+        document.getElementById("buy2").addEventListener("click", function () {
+        window.open("https://buy.stripe.com/00g29V8Y3bSxgbCfZ0", "_blank");
+        });
+
+        //  Payment 3
+        document.getElementById("buy3").addEventListener("click", function () {
+        window.open("https://buy.stripe.com/cN229Vein3m16B2cMP", "_blank");
+        });
+
+        //  Payment 4
+        document.getElementById("buy4").addEventListener("click", function () {
+        window.open("https://buy.stripe.com/8wM7ufgqv6ydf7ydQU", "_blank");
+        });
+        
+        //  Payment 5
+        document.getElementById("buy5").addEventListener("click", function () {
+        window.open("https://buy.stripe.com/8wM5m7a27cWBbVm149", "_blank");
+        });
+
+
+        const gifContainer = document.querySelector('.gif-container');
+        const navigation = document.querySelector('.navigation');
+
+        const gifs = [
+            'dunk_2.gif',
+            'dunk_1.gif',
+            'dunk_3.gif',
+            'dunk_4.gif',
+            'dunk_5.gif',
+            'dunk_6.gif',
+            'dunk_7.gif',
+        ];
+
+        // Create navigation circles
+        gifs.forEach((_, index) => {
+            const circle = document.createElement('div');
+            circle.classList.add('navigation-circle');
+            circle.addEventListener('click', () => showGif(index));
+            navigation.appendChild(circle);
+        });
+
+        let currentGifIndex = 0;
+
+        // Function to display a GIF
+        function showGif(index) {
+            currentGifIndex = index;
+            gifContainer.innerHTML = `<img class="gif" src="${gifs[index]}">`;
+            updateNavigationCircles();
+        }
+
+        // Function to update navigation circles
+        function updateNavigationCircles() {
+            const circles = document.querySelectorAll('.navigation-circle');
+            circles.forEach((circle, index) => {
+                if (index === currentGifIndex) {
+                    circle.classList.add('active');
+                } else {
+                    circle.classList.remove('active');
+                }
+            });
+        }
+
+        // Initial display
+        showGif(currentGifIndex);
+
+
+</script>
+</body>
+</html>
