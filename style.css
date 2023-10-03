@@ -133,9 +133,15 @@ footer {
 .custom-list {
         color: white; /* Set the color of the bullets to white */
         /* Add more list styling here if needed */
+        text-align: center; /* Center-align the bullet points */
+        padding-left: 0; /* Remove the default left padding of the list */    
     }
     
-
+    .custom-list li {
+        list-style-position: inside; /* Place the bullet points inside the list item */
+        margin: 10px 0; /* Add some margin to separate the list items */
+    }
+    
 
 
     @media (max-width: 768px) {
@@ -196,8 +202,8 @@ footer {
 
         .navigation-circle {
             display: inline-block;
-            width: 30px;
-            height: 30px;
+            width: 40px;
+            height: 40px;
             background-color: #333;
             border-radius: 50%;
             margin: 0 5px;
