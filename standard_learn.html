@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>4Kael Jump Program</title>
+    <title>4Kael Standard</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     
     <style>
@@ -145,6 +145,17 @@
         margin: 10px;
         background-color: #000; /* Set the background color of the packages to black */
         }
+
+        @media (max-width: 768px) {
+        .packages-container {
+            flex-direction: column; /* Stack the packages vertically on smaller screens */
+        }
+    
+        .standard-package{
+            width: 90%; /* Take up the full width of the container on smaller screens */
+            
+        }
+    }
 
     .adjust {
         margin-top: 0px;
@@ -462,44 +473,46 @@
                 click the link below.
 
             </p>
-            <div class="container">
-                <div class="section" onclick="toggleSection('section1')">
-                    <h4>Power-Based Program ▼</h4>
-                    <div id="section1" class="content">
-                        <p class="custom-font white">
-                            <ul class="custom-list">
-                              <li class="custom-font"><b>Focus:</b> Emphasizes building power as the foundation for improving your vertical jump.</li>
-                              <li class="custom-font"><b>Ideal for:</b> Individuals looking to increase their vertical leap through power training.</li>
-                            </ul>
-                          </p>
-                    </div>
-                </div>
-            
-                <div class="section" onclick="toggleSection('section2')">
-                    <h4>Power/Explosiveness Program ▼</h4>
-                    <div id="section2" class="content">
-                        <p class="custom-font white">
-                            <ul class="custom-list">
-                              <li class="custom-font"><b>Focus:</b> Balances power and explosiveness training to maximize your jump height.</li>
-                              <li class="custom-font"><b>Ideal for:</b> Athletes seeking a combination of power and explosiveness for a higher vertical jump.</li>
-                            </ul>
-                          </p>
-                    </div>
-                </div>
-            
-                <div class="section" onclick="toggleSection('section3')">
-                    <h4>Explosiveness Program ▼</h4>
-                    <div id="section3" class="content">
-                        <p class="custom-font white">
-                            <ul class="custom-list">
-                              <li class="custom-font"><b>Focus:</b> Concentrates on explosive exercises to rapidly enhance your vertical jump.</li>
-                              <li class="custom-font"><b>Ideal for:</b> Those wanting quick gains in jump height through explosive training.</li>
-                            </ul>
-                          </p>
-                    </div>
+            <div class="packages-container">
+                <div class="package standard-package">
+            <div class="section" onclick="toggleSection('section1')">
+                <h4 class="custom-font">Power-Based Program ▼</h4>
+                <div id="section1" class="content">
+                    <p class="custom-font white">
+                        <ul class="custom-list">
+                            <li class="custom-font"><b>Focus:</b> Emphasizes building power as the foundation for improving your vertical jump.</li>
+                            <li class="custom-font"><b>Ideal for:</b> Individuals looking to increase their vertical leap through power training.</li>
+                      </ul>
+                      </p>
                 </div>
             </div>
-            
+        
+            <div class="section" onclick="toggleSection('section2')">
+                <h4 class="custom-font">Power/Explosiveness Program ▼</h4>
+                <div id="section2" class="content">
+                    <p class="custom-font white">
+                        <ul class="custom-list">
+                            <li class="custom-font"><b>Focus:</b> Balances power and explosiveness training to maximize your jump height.</li>
+                            <li class="custom-font"><b>Ideal for:</b> Athletes seeking a combination of power and explosiveness for a higher vertical jump.</li>
+                      </ul>
+                      </p>
+                </div>
+            </div>
+        
+            <div class="section" onclick="toggleSection('section3')">
+                <h4 class="custom-font">Explosiveness Program ▼</h4>
+                <div id="section3" class="content">
+                    <p class="custom-font white">
+                        <ul class="custom-list">
+                            <li class="custom-font"><b>Focus:</b> Concentrates on explosive exercises to rapidly enhance your vertical jump.</li>
+                            <li class="custom-font"><b>Ideal for:</b> Those wanting quick gains in jump height through explosive training.</li>
+                      </ul>
+                      </p>
+                </div>
+            </div>
+        
+                </div>
+
         </section>
         <section id="step3">
             <h2>Step 3: Payment Plan</h2>
