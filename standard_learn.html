@@ -146,17 +146,6 @@
         background-color: #000; /* Set the background color of the packages to black */
         }
 
-        @media (max-width: 768px) {
-        .packages-container {
-            flex-direction: column; /* Stack the packages vertically on smaller screens */
-        }
-    
-        .standard-package{
-            width: 90%; /* Take up the full width of the container on smaller screens */
-            
-        }
-    }
-
     .adjust {
         margin-top: 0px;
         margin-bottom: 0px;
@@ -355,8 +344,8 @@
         }
 
         .image {
-            width: 100px; /* Set the desired width for your image */
-            height: auto; /* Maintain aspect ratio */
+            width: 80px; /* Set the desired width for your image */
+            height: 90px; /* Maintain aspect ratio */
             margin-right: 30px; /* Add some space between the image and text */
         }
 
@@ -388,8 +377,8 @@
         }
 
         .social-links img {
-            width: 30px;
-            height: 30px;
+            width: 20px;
+            height: 20px;
             border: none;
         }
 
@@ -452,7 +441,7 @@
             <h2>Step 1: Metric Assessment</h2>
             
             <div class="container">
-                <img src="form.jpg" alt="Form Image" class="image" width="230" height="200">
+                <img src="form.jpg" alt="Form Image" class="image">
                 <p class="white">To embark on this journey, please take a moment to 
                     fill out our <span class="red">Metric Assessment Form</span>. This essential initial step 
                     guarantees that we can slightly customize your program to perfectly align 
@@ -473,46 +462,44 @@
                 click the link below.
 
             </p>
-            <div class="packages-container">
-                <div class="package standard-package">
-            <div class="section" onclick="toggleSection('section1')">
-                <h4 class="custom-font">Power-Based Program ▼</h4>
-                <div id="section1" class="content">
-                    <p class="custom-font white">
-                        <ul class="custom-list">
-                            <li class="custom-font"><b>Focus:</b> Emphasizes building power as the foundation for improving your vertical jump.</li>
-                            <li class="custom-font"><b>Ideal for:</b> Individuals looking to increase their vertical leap through power training.</li>
-                      </ul>
-                      </p>
+            <div class="container">
+                <div class="section" onclick="toggleSection('section1')">
+                    <h4>Power-Based Program</h4>
+                    <div id="section1" class="content">
+                        <p class="custom-font white">
+                            <ul class="custom-list">
+                              <li class="custom-font"><b>Focus:</b> Emphasizes building power as the foundation for improving your vertical jump.</li>
+                              <li class="custom-font"><b>Ideal for:</b> Individuals looking to increase their vertical leap through power training.</li>
+                            </ul>
+                          </p>
+                    </div>
+                </div>
+            
+                <div class="section" onclick="toggleSection('section2')">
+                    <h4>Power/Explosiveness Program</h4>
+                    <div id="section2" class="content">
+                        <p class="custom-font white">
+                            <ul class="custom-list">
+                              <li class="custom-font"><b>Focus:</b> Balances power and explosiveness training to maximize your jump height.</li>
+                              <li class="custom-font"><b>Ideal for:</b> Athletes seeking a combination of power and explosiveness for a higher vertical jump.</li>
+                            </ul>
+                          </p>
+                    </div>
+                </div>
+            
+                <div class="section" onclick="toggleSection('section3')">
+                    <h4>Explosiveness Program</h4>
+                    <div id="section3" class="content">
+                        <p class="custom-font white">
+                            <ul class="custom-list">
+                              <li class="custom-font"><b>Focus:</b> Concentrates on explosive exercises to rapidly enhance your vertical jump.</li>
+                              <li class="custom-font"><b>Ideal for:</b> Those wanting quick gains in jump height through explosive training.</li>
+                            </ul>
+                          </p>
+                    </div>
                 </div>
             </div>
-        
-            <div class="section" onclick="toggleSection('section2')">
-                <h4 class="custom-font">Power/Explosiveness Program ▼</h4>
-                <div id="section2" class="content">
-                    <p class="custom-font white">
-                        <ul class="custom-list">
-                            <li class="custom-font"><b>Focus:</b> Balances power and explosiveness training to maximize your jump height.</li>
-                            <li class="custom-font"><b>Ideal for:</b> Athletes seeking a combination of power and explosiveness for a higher vertical jump.</li>
-                      </ul>
-                      </p>
-                </div>
-            </div>
-        
-            <div class="section" onclick="toggleSection('section3')">
-                <h4 class="custom-font">Explosiveness Program ▼</h4>
-                <div id="section3" class="content">
-                    <p class="custom-font white">
-                        <ul class="custom-list">
-                            <li class="custom-font"><b>Focus:</b> Concentrates on explosive exercises to rapidly enhance your vertical jump.</li>
-                            <li class="custom-font"><b>Ideal for:</b> Those wanting quick gains in jump height through explosive training.</li>
-                      </ul>
-                      </p>
-                </div>
-            </div>
-        
-                </div>
-
+            
         </section>
         <section id="step3">
             <h2>Step 3: Payment Plan</h2>
@@ -524,7 +511,6 @@
                 <span class="red"><b>One-Time Plan:</b></span> PDF will be sent to 
                 your email at the once payment has been completed.
             </p>
-            <br>
 
             <div class="tabs">
                 <div class="tab active" onclick="showMonthly()"><h4><span class="white">Subscription Plan</span></h4></div>
@@ -564,8 +550,7 @@
             <h2>Step 4: Receive Your Program</h2>
 
             <div class="container">
-                <img src="download.png" alt="Form Image" class="image" width="300" height="200">
-                
+                <img src="download.png" alt="Form Image" class="image">
                 <p class="white">Program materials will be sent <span class="red">via email</span> 
                     in the form of a downloadable PDF. 
                     <br>
