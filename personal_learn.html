@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>4Kael Jump Program</title>
+    <title>4Kael Personal</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         .tabs {
@@ -383,6 +383,31 @@
         .social-links a:hover img {
             opacity: 0.8;
         }
+        .packages-container {
+        display: flex;
+        justify-content: space-between;
+        background-color: #000; /* Set the background color of the entire container to black */
+        text-align: center;    
+    }
+    
+    .package {
+        flex: 1;
+        padding: 20px;
+        border: 2px solid #fff; /* Adding a white border to the packages for visibility */
+        margin: 10px;
+        background-color: #000; /* Set the background color of the packages to black */
+        }
+
+        @media (max-width: 768px) {
+        .packages-container {
+            flex-direction: column; /* Stack the packages vertically on smaller screens */
+        }
+    
+        .standard-package{
+            width: 90%; /* Take up the full width of the container on smaller screens */
+            
+        }
+    }
 
   
     </style>
@@ -463,44 +488,46 @@
 
         <h6 class="white"><em>We combine these three strategies to craft a program 
             tailored to your metrics and physique. Click below to learn more!</em></h3>
-        <div class="container">
+        
+            <div class="packages-container">
+                <div class="package standard-package">
             <div class="section" onclick="toggleSection('section1')">
-                <h4>Power-Based ▼</h4>
+                <h4 class="custom-font">Power-Based ▼</h4>
                 <div id="section1" class="content">
                     <p class="custom-font white">
                         <ul class="custom-list">
-                          <li class="custom-font"><b>Focus:</b> Emphasizes building power as the foundation for improving your vertical jump.</li>
-                          <li class="custom-font"><b>Ideal for:</b> Individuals looking to increase their vertical leap through power training.</li>
+                            <li class="custom-font"><b>Focus:</b> We prioritize perfecting your jumping form and technique to boost your vertical leap.</li>
+                            <li class="custom-font"><b>Ideal for:</b> Tailored for individuals aiming to increase their vertical jump by refining their jumping form and technique.</li>
                         </ul>
                       </p>
                 </div>
             </div>
         
             <div class="section" onclick="toggleSection('section2')">
-                <h4>Jumping Technique ▼</h4>
+                <h4 class="custom-font">Jumping Technique ▼</h4>
                 <div id="section2" class="content">
                     <p class="custom-font white">
                         <ul class="custom-list">
-                            <li class="custom-font"><b>Focus:</b> We prioritize perfecting your jumping form and technique to boost your vertical leap.</li>
-                            <li class="custom-font"><b>Ideal for:</b> Tailored for individuals aiming to increase their vertical jump by refining their jumping form and technique.</li>
-                          </ul>
+                            <li class="custom-font"><b>Focus:</b> Balances power and explosiveness training to maximize your jump height.</li>
+                            <li class="custom-font"><b>Ideal for:</b> Athletes seeking a combination of power and explosiveness for a higher vertical jump.</li>
+                      </ul>
                       </p>
                 </div>
             </div>
         
             <div class="section" onclick="toggleSection('section3')">
-                <h4>Explosiveness ▼</h4>
+                <h4 class="custom-font">Explosiveness ▼</h4>
                 <div id="section3" class="content">
                     <p class="custom-font white">
                         <ul class="custom-list">
-                          <li class="custom-font"><b>Focus:</b> Concentrates on explosive exercises to rapidly enhance your vertical jump.</li>
-                          <li class="custom-font"><b>Ideal for:</b> Those wanting quick gains in jump height through explosive training.</li>
+                            <li class="custom-font"><b>Focus:</b> Concentrates on explosive exercises to rapidly enhance your vertical jump.</li>
+                            <li class="custom-font"><b>Ideal for:</b> Those wanting quick gains in jump height through explosive training.</li>
                         </ul>
                       </p>
                 </div>
             </div>
-
-        </div>
+        
+                </div>
 
         </section>
         <section id="step3">
@@ -659,3 +686,4 @@
 </script>
 </body>
 </html>
+
