@@ -371,3 +371,14 @@ footer {
     display: flex;
     justify-content: space-between;
 }
+
+.video-container {
+    width:60%; /* Adjust the width as needed */
+    margin: 0 auto; /* Center the container horizontally */
+    padding-top: 10px;
+}
+
+video {
+    max-width: 100%; /* Make sure the video doesn't exceed its container's width */
+    display: block; /* Remove any default inline spacing */
+}
