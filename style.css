@@ -39,9 +39,6 @@ p{
     margin-bottom: 2px;
 }
 
-
-
-
 .custom-font {
     font-family:Verdana, Geneva, Tahoma, sans-serif;
 }
@@ -381,4 +378,10 @@ footer {
 video {
     max-width: 100%; /* Make sure the video doesn't exceed its container's width */
     display: block; /* Remove any default inline spacing */
+}
+
+@media screen and (max-width: 600px) {
+    .video-container {
+        width: 100%;
+    }
 }
