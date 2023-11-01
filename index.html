@@ -1,254 +1,403 @@
-<html>
-<head>
-<title>4Kael Jump Program</title>
-<link rel="stylesheet" type="text/css" href="style.css">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Handjet:wght@100;400;600&family=Oswald:wght@300&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Fjalla+One&family=Handjet:wght@100;400;600&family=Oswald:wght@300&display=swap" rel="stylesheet">
+body{
+    background-color: rgb(110, 110, 110);
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    padding: 15px;
+}
 
-</head>
-<body>
+h1{
+    color: #f9d069;
+    font-size: 45px;
+}
 
-    <div class="custom-font">
-    <div class="yup">
-    <div class="navbar">
-        <div class="custom-font-1">
-        <a href="index.html">Home</a>
-        <div class="dropdown">
-            <button class="dropbtn">Services</button>
-            <div class="dropdown-content">
-                <a href="standard_learn.html">Standard</a>
-                <a href="personal_learn.html">Personalized</a>
-                <a href="1on1_learn.html">1-on-1</a>
-            </div>
-            </div>
-        </div>
-    </div>
+h2{
+    color: white;
+    font-weight: bold;
+    font-size: 30px;
+}
 
-<!-- Main Picture. -->
-        <div class="centered-text">
-            <img src="logo_2_clear.png" width="200" height="36" style="margin-right: 20px;">
-        </div>
-</div>
-<!-- Title. -->
-            <div class="centered-text">
-                <h1 class="custom-font"> Exclusive Jump Program </h1>
-                <h1 class="custom-font">Designed by 4kael</h1>
-                <h2 class="custom-font"><em>Unlock your potential...</em></h2>
-            </div>
-                 
-<!-- Get Started Today! Button. -->
-            <div class="center-container" >
-            <button class="custom-button" id="buy"><b>Get Started</b></button >
-            </div>   
-<hr>
+h3{
+    color: white;
+    font-size: 24px;
+}
 
- 
-
-<div class="video-container">
-    <video controls>
-        <source src="kael.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-    </video>
-</div>
-
-<br>
-<hr>
-<!-- Intro Text. -->
-            <div class="centered-text">
-                <h2 class="custom-font">Jump Program Options</h2>
-                <h3 class="custom-font" class="centered-text" class="text-container">Pick <span class="red">Standard</span> or <span class="red">Personalized</span> Program.</h3>
-                <h3 class="custom-font" class="centered-text" class="text-container">Choose Your Membership: Monthly, Annual, or 10/14/18-Week</h3>
-                </div>
-
-<!-- Standard Rectangle. -->
-            <div class="packages-container">
-                <div class="package standard-package">
-                    <div class="package">
-                    <h3 class="custom-font"><span class="red"> Standard Program </span></h3>
-                    <h4 class="custom-font"><i>3 Specialized Tracks based on your metrics:</i></h4> 
-             <!-- Standard LEarn More! Button. -->
-            <div class="center-container" >
-                <button class="custom-button" id="standard_learn"><b>Learn More</b></butto >
-                </div> 
-            
-            </div>
-
-            <div class="section" onclick="toggleSection('section1')">
-                <h4 class="custom-font">1. Power-Based Program ▼</h4>
-                <div id="section1" class="content">
-                    <p class="custom-font white">
-                        <ul class="custom-list">
-                          <li class="custom-font"><b>Focus:</b> Emphasizes power training through a predominantly weighted based program as the foundation for maximizing your vertical. </li>
-                          <li class="custom-font"><b>Ideal for:</b> Individuals with beginner level strength and intermediate-advanced explosive ability. </li>
-                        </ul>
-                      </p>
-                </div>
-            </div>
-        
-            <div class="section" onclick="toggleSection('section2')">
-                <h4 class="custom-font">2. Power/Explosiveness Program ▼</h4>
-                <div id="section2" class="content">
-                    <p class="custom-font white">
-                        <ul class="custom-list">
-                          <li class="custom-font"><b>Focus:</b> Combines power and explosiveness through a balanced mix of weighted and plyometric training to maximize your vertical.</li>
-                          <li class="custom-font"><b>Ideal for:</b> Individuals with intermediate strength/explosive ability, or a relatively even mix of both </li>
-                        </ul>
-                      </p>
-                </div>
-            </div>
-        
-            <div class="section" onclick="toggleSection('section3')">
-                <h4 class="custom-font">3. Explosiveness Program ▼</h4>
-                <div id="section3" class="content">
-                    <p class="custom-font white">
-                        <ul class="custom-list">
-                          <li class="custom-font"><b>Focus:</b> Concentrates on explosive training through a predominantly plyometric oriented program.</li>
-                          <li class="custom-font"><b>Ideal for:</b> Individuals with advanced strength and beginner-intermediate explosive ability.</li>
-                        </ul>
-                      </p>
-                </div>
-            </div>
-        
-                </div>
+h4{
+    color: #b6b6b6;
+    font-size: 18px;
 
 
-<!-- Personalized Rectangle -->
-            <div class="package personalized-package">
-                <div class="package">
-                <h3 class="custom-font"><span class="red">Personalized Program</span></h3>
-                <h4 class="custom-font"><i>Fully Customized to Your Unique Needs:</i></h4> 
-                <!-- Personal LEarn More! Button. -->
-                <div class="center-container" >
-                <button class="custom-button" id="personal_learn"><b>Learn More</b></butto >
-                </div>
-            </div>
-   
-               
-            <div class="section" onclick="toggleSection('section4')">
-                <h4 class="custom-font">Initial Assessment: ▼</h4>
-                <div id="section4" class="content">
-                    <p class="custom-font" class="white">
-                        We collect essential metrics such as your height, weight,
-                      current vertical jump, and other relevant information.
-                 </p>
-                </div>
-            </div>
-        
-            <div class="section" onclick="toggleSection('section5')">
-                <h4 class="custom-font">One-on-One Consultation: ▼</h4>
-                <div id="section5" class="content">
-                    <p class="custom-font">
-                        We schedule a personalized phone call with you to discuss your 
-                        goals, training history, and any special considerations.    
-                    </p>
-                    
-                </div>
-            </div>
-        
-            <div class="section" onclick="toggleSection('section6')">
-                <h4 class="custom-font">Custom Program Design ▼</h4>
-                <div id="section6" class="content">
-                    <p class="custom-font">
-                        Based on the data gathered and our conversation, 
-                        our expert trainers craft a unique and comprehensive jump program tailored 
-                        to your individual needs.
-                    </p>
-                </div>
-            </div> 
-            
-                </div>
-        </div>
-<br>
-<br>
-<br>
-<br>
-<br>
-<hr>
-<!-- In-Person Jump Program -->
-    <div class="centered-text">
-        <h2 class="custom-font">In-Person Jump Program Options</h2> 
+}
 
-        <h3 class="custom-font" class="centered-text" class="text-container"><span class="red"> 1-on-1</span> and <span class="red"> 
-            Group</span> Jump Programs will be held in person at <span class="red">UCLA</span></h3>       
+p{
+    color: white;
+}
+
+.centered-text {
+    text-align: center;
+}
+
+
+
+.custom-font {
+    font-family: 'Fjalla One', sans-serif;
+}
+.custom-font-1 {
+    font-family: 'Handjet', sans-serif;
+}
+
+.red{
+    color: red;
+}
+
+
+video {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+
+/* Style for the course title */
+.course h2 {
+    margin: 0;
+    font-size: 18px;
+    color: #333;
+}
+
+/* Style for the course description */
+.course p {
+    font-size: 14px;
+    color: #666;
+}
+
+
+.text-container {
+    margin: 20px; /* Add space around the container */
+    padding: 10px; /* Add padding inside the container (optional) */
+    border: 1px solid #ccc; /* Add a border around the container (optional) */
+}
+
+/* FOOTER */
+
+footer {
+    background-color: #000000;
+    color: #fff;
+    padding: 7px;
+    text-align: center;
+}
+
+.contact-info a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.social-links a {
+    margin: 0 10px;
+    display: inline-block;
+}
+
+.social-links img {
+    width: 30px;
+    height: 30px;
+    border: none;
+}
+
+.social-links a:hover img {
+    opacity: 0.8;
+}
+
+
+.white{
+    color: white;
+}
+
+.packages-container {
+    display: flex;
+    justify-content: space-between;
+    background-color: #000; /* Set the background color of the entire container to black */
+    text-align: center;    
+}
     
-    </div>
+.package {
+    flex: 1;
+    padding: 20px;
+    border: 2px solid #fff; /* Adding a white border to the packages for visibility */
+    margin: 10px;
+    background-color: #000; /* Set the background color of the packages to black */
+    }
+    
 
 
-<!-- BUTTON -->
-    <div class="center-container" >
-    <button class="custom-button" id="schedule"><b>Schedule Now!</b></button>
-    </div>   
+.custom-list {
+        color: white; /* Set the color of the bullets to white */
+        /* Add more list styling here if needed */
+        text-align: center; /* Center-align the bullet points */
+        padding-left: 0; /* Remove the default left padding of the list */    
+    }
+    
+    .custom-list li {
+        list-style-position: inside; /* Place the bullet points inside the list item */
+        margin: 10px 0; /* Add some margin to separate the list items */
+    }
+    
 
 
-<!-- Individual -->
-
-<div class="packages-container">
-    <div class="package">
-        <div class="centered-text">
-            <h3 class="custom-font"><span class="red">Private 1-on-1 Jump Sessions</span></h3>
-        </div>
-        <p class="custom-font white">
+    @media (max-width: 768px) {
+        .packages-container {
+            flex-direction: column; /* Stack the packages vertically on smaller screens */
+        }
+    
+        .standard-package,
+        .personalized-package {
+            width: 90%; /* Take up the full width of the container on smaller screens */
             
-            <ul class="custom-list">
-                <li class="custom-font">Personalized coaching</li>
-                <li class="custom-font">Flexible scheduling</li>
-                <li class="custom-font">One-hour sessions</li>
-                <li class="custom-font">Individualized feedback</li>
-                <li class="custom-font">Equipment provided</li>
-                <li class="custom-font">Exclusive attention</li>
-                <li class="custom-font">Goal-oriented</li>
-            </ul>
-          </p>
+        }
 
-    </div>
-            
+                    /* Style the button */
+        .custom-button {
+            font-family: 'Handjet', sans-serif;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            display: inline-block;
+            padding: 15px 30px;
+            background-color: rgb(255, 0, 0);
+            color: black;
+            border: none;
+            border-radius: 10px; /* Add rounded corners for soft edges */
+            text-align: center;
+            text-decoration: none;
+            font-size: 20px;
+            cursor: pointer;
+        }
 
-<!-- Group Sessions -->
-
-    <div class="package">
-        <div class="centered-text">
-        <h3 class="custom-font"><span class="red">Group Jump Sessions</span></h3>
-        </div>
-        <p class="custom-font white">
-            <ul class="custom-list">
-                <li class="custom-font">Fun and social</li>
-                <li class="custom-font">Structured workouts</li>
-                <li class="custom-font">Motivation through peers</li>
-                <li class="custom-font">One-hour sessions</li>
-                <li class="custom-font">Scheduled classes</li>
-                <li class="custom-font">Equipment provided</li>
-                <li class="custom-font">Build a jumping community</li>
-            </ul>
-        </p>
-
-    </div>
-</div>
-
-<hr>
-<br>
-<br>
-<br>
-<br>
-<hr>
-
-<!-- Footer -->
-                    <footer>
-                        <div class="contact-info" >
-                            <p class="custom-font">Contact Email: <a href="mailto:4kael.business@gmail.com" class="custom-font">4kael.business@gmail.com</a></p>
-                        </div>
-                        <div class="social-links">
-                            <a href="https://www.instagram.com/4kael/?hl=en" target="_blank"><img src="ig.png" alt="Instagram"></a>
-                            <a href="https://www.youtube.com/channel/UCydBS5LuedqiAwosJEw_Ueg" target="_blank"><img src="yt.png" alt="YouTube"></a>
-                            <a href="https://www.tiktok.com/@4kael_" target="_blank"><img src="ti.png" alt="TikTok"></a>
-                        </div>
-                    </footer>
-                
+        /* Style the button on hover for a slight effect */
+        .custom-button:hover {
+            background-color: #ffffff; /* Darken the button color */
+        }
 
 
-<!-- Java Script connect -->
-<script src="script.js"></script>
-</body>
-</html>
+        .slider-container {
+            text-align: center;
+            margin: 20px;
+        }
+
+        .gif-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        .gif {
+            max-width: 250px; /* Set the desired maximum width for the GIFs */
+            height: auto;
+            border: 2px solid white; /* Add a white border */
+        }
+
+        .navigation {
+            margin-top: 20px;
+        }
+
+        .navigation-circle {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            background-color: #333;
+            border-radius: 50%;
+            margin: 0 5px;
+            cursor: pointer;
+        }
+
+
+    }
+    
+
+.center-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: 'Handjet', sans-serif;
+      }
+  
+      /* Style the button */
+.custom-button {
+        margin-top: 10px;
+        margin-bottom: 10px;
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: rgb(255, 0, 0);
+        color: rgb(255, 255, 255);
+        border: none;
+        border-radius: 10px; /* Add rounded corners for soft edges */
+        text-align: center;
+        text-decoration: none;
+        font-size: 22px;
+        cursor: pointer;
+        font-family: 'Handjet', sans-serif;
+    }
+  
+      /* Style the button on hover for a slight effect */
+    .custom-button:hover {
+        background-color: #37ff00; /* Darken the button color */
+        font-family: 'Handjet', sans-serif;
+      }
+  
+
+      .slider-container {
+        text-align: center;
+        margin: 20px;
+    }
+
+    .gif-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+    }
+
+    .gif {
+        max-width: 250px; /* Set the desired maximum width for the GIFs */
+        height: auto;
+        border: 2px solid white; /* Add a white border */
+    }
+
+    .navigation {
+        margin-top: 20px;
+    }
+
+    .navigation-circle {
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+        background-color: #333;
+        border-radius: 50%;
+        margin: 0 5px;
+        cursor: pointer;
+    }
+
+
+.section {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px;
+    cursor: pointer;
+}
+
+.section:hover {
+    background-color: #f73a3a;
+}
+
+.content {
+    display: none;
+}
+
+
+        /* Style the navigation bar */
+        .navbar {
+            background-color: #000; /* Black background color */
+            overflow: hidden;
+        }
+
+        /* Navigation bar links */
+        .navbar a {
+            float: left;
+            font-size: 24px;
+            color: #fff; /* White text color */
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        /* Style the dropdown container */
+        .dropdown {
+            float: left;
+            overflow: hidden;
+        }
+
+        /* Style the dropdown button */
+        .dropdown .dropbtn {
+            font-size: 24px;
+            font-family: 'Handjet', sans-serif;
+            border: none;
+            outline: none;
+            color: #fff;
+            background-color: inherit;
+            padding: 14px 16px;
+            margin: 0;
+        }
+
+        /* On hover, the dropdown button will change color */
+        .dropdown:hover .dropbtn {
+            background-color: #333; /* Darker shade of black */
+        }
+
+        /* Style the dropdown content (hidden by default) */
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #000;
+            min-width: 160px;
+            z-index: 1;
+        }
+
+        /* Style the dropdown links */
+        .dropdown-content a {
+            float: none;
+            color: #fff;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+
+        /* On hover, the dropdown links will change color */
+        .dropdown-content a:hover {
+            background-color: #333; /* Darker shade of black */
+        }
+
+        /* Show the dropdown content when the dropdown button is hovered over */
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+
+  hr {
+    border: none; /* Remove the default border */
+    background-color: white; /* Set the background color to white */
+    height: 2px; /* Adjust the height of the line as needed */
+    margin: 10px 0; /* Add some vertical spacing */
+  }
+
+  .yup {
+    display: flex;
+    justify-content: space-between;
+}
+
+.video-container {
+    width:60%; /* Adjust the width as needed */
+    margin: 0 auto; /* Center the container horizontally */
+    padding-top: 10px;
+}
+
+video {
+    max-width: 100%; /* Make sure the video doesn't exceed its container's width */
+    display: block; /* Remove any default inline spacing */
+}
+
+@media screen and (max-width: 600px) {
+    .video-container {
+        width: 100%;
+    }
+
+}
+
+@media only screen and (max-width: 600px) {
+    .centered-text img {
+        width: 100px;
+        height: 18px;
+        margin-right: 10px;
+    }
+}
