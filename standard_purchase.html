@@ -5,6 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>4Kael Jump Program</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Handjet:wght@100;400;600&family=Oswald:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&family=Handjet:wght@100;400;600&family=Oswald:wght@300&display=swap" rel="stylesheet">
+
+   
     <style>
         .tabs {
             display: flex;
@@ -44,31 +51,33 @@
 
         .plan h2 {
             font-size: 24px;
-            font-family:Verdana, Geneva, Tahoma, sans-serif;
+            font-family: 'Fjalla One', sans-serif;
 
         }
 
         h2{
             color: white;
             text-align: center;
+            font-family: 'Fjalla One', sans-serif;
+
         }
 
         .plan h3 {
             font-size: 18px;
             text-align: center;
-            font-family:Verdana, Geneva, Tahoma, sans-serif;
+            font-family: 'Handjet', sans-serif;
             color: #ffffff;
         }
 
         .price {
-            font-family:Verdana, Geneva, Tahoma, sans-serif;
+            font-family: 'Handjet', sans-serif;
             color: white;
             font-size: 36px;
         }
 
         .duration {
             font-size: 16px;
-            font-family:Verdana, Geneva, Tahoma, sans-serif;
+            font-family: 'Handjet', sans-serif;
             color: white;
             margin-top: 10px;
         }
@@ -77,15 +86,16 @@
             text-align: center;
         }
         h1 {
+            color: #f9d069;
             text-align: center;
-            color: #333;
-            margin-top: 20px;
+            font-family: 'Fjalla One', sans-serif;
+            font-size: 37px;
         }
 
         .custom{
             color: white;
             text-align: center;
-            font-family:Verdana, Geneva, Tahoma, sans-serif;
+            font-family: 'Handjet', sans-serif;
         }
 
         ul {
@@ -127,14 +137,17 @@
         }
 
         .custom-font {
-            font-family:Verdana, Geneva, Tahoma, sans-serif;
+            font-family: 'Handjet', sans-serif;
         }
 
         .packages-container {
         display: flex;
         justify-content: space-between;
         background-color: #000; /* Set the background color of the entire container to black */
-        text-align: center;    
+        text-align: center;
+        margin-left: 100px;
+        margin-right: 100px;  
+    
     }
     
     .package {
@@ -186,7 +199,7 @@
         /* Navigation bar links */
         .navbar a {
             float: left;
-            font-size: 16px;
+            font-size: 18px;
             color: #fff; /* White text color */
             text-align: center;
             padding: 14px 16px;
@@ -201,7 +214,8 @@
 
         /* Style the dropdown button */
         .dropdown .dropbtn {
-            font-size: 16px;
+            font-size: 18px;
+            font-family: 'Handjet', sans-serif;
             border: none;
             outline: none;
             color: #fff;
@@ -244,27 +258,43 @@
             display: block;
         }
 
+
         .center-container {
             display: flex;
             justify-content: center;
             align-items: center;
+            font-family: 'Handjet', sans-serif;
+        }
+
+        .custom-button {
+            font-family: 'Handjet', sans-serif;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: rgb(255, 0, 0);
+            color: black;
+            border: none;
+            border-radius: 10px; /* Add rounded corners for soft edges */
+            text-align: center;
+            text-decoration: none;
+            font-size: 22px;
+            cursor: pointer;
         }
 
         hr {
             border: none; /* Remove the default border */
-            background-color: white; /* Set the background color to white */
+            background-color: rgb(0, 0, 0); /* Set the background color to white */
             height: 2px; /* Adjust the height of the line as needed */
-            margin: 10px 0; /* Add some vertical spacing */
+            margin: 4px 0; /* Add some vertical spacing */
         }
-        
-        /* Global styles */
+                /* Global styles */
         body {
-            font-family: Arial, sans-serif;
-            background-color: #000000;
+            background-color: rgb(110, 110, 110);
             color: white;
             margin: 0;
-            padding: 15px;            
-            font-family:Verdana, Geneva, Tahoma, sans-serif;
+            padding: 15px;  
+            font-family: 'Handjet', sans-serif;          
         }
  
         .containers {
@@ -427,7 +457,7 @@
     
     <!-- Main Text. -->
     <div class="custom">
-    <h2>4Kael <span class="red">Standard </span>Program</h2>
+    <h1>Standard Program</h1>
     </div>
     
 
@@ -441,12 +471,12 @@
             <i class="fas fa-rocket" id="icon3"></i>
         </div>
         <section id="step1">
-            <h2>Step 1: Metric Assessment</h2>
+            <h2 class="black">Step 1: Metric Assessment</h2>
             <div id="ff-compose"></div>
             <script async defer src="https://formfacade.com/include/102452761580912996464/form/1FAIpQLSfQ8d6P7bzusngSCyDy5QoOdv5uYkrsRfTSgfd0wBWWncciPg/classic.js?div=ff-compose"></script>        
         </section>
         <section id="step2">
-            <h2>Step 2: Payment Plan</h2>
+            <h2 class="black">Step 2: Payment Plan</h2>
 
             <div class="tabs">
                 <div class="tab active" onclick="showMonthly()"><h4 class="white">Subscription Plan</h4></div>
@@ -490,10 +520,9 @@
 
         </section>
         <section id="step3">
-            <h1 class="white">Congrats!</h1>
+            <h2 class="black">Congrats!</h2>
             <div class="centered-text">           
-            <p class="white" >Thank you for choosing our 4Kael Standard Program!</p>
-            <p class="white">Here's what to expect next:</p>
+            <p class="black">Thank you for choosing our 4Kael Standard Program! Here's what to expect next:</p>
             </div>
             <div class="yup">
                 <div class="slider-container">
