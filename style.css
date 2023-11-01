@@ -391,4 +391,13 @@ video {
     .video-container {
         width: 100%;
     }
+
+}
+
+@media only screen and (max-width: 600px) {
+    .centered-text img {
+        width: 100px;
+        height: 18px;
+        margin-right: 10px;
+    }
 }
