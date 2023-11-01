@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>4Kael Personal</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Handjet:wght@100;400;600&family=Oswald:wght@300&display=swap" rel="stylesheet">
+
     <style>
         .tabs {
             display: flex;
@@ -44,13 +48,15 @@
 
         .plan h2 {
             font-size: 24px;
-            font-family:Verdana, Geneva, Tahoma, sans-serif;
+            font-family: 'Fjalla One', sans-serif;
 
         }
 
         h2{
             color: white;
             text-align: center;
+            font-family: 'Fjalla One', sans-serif;
+
         }
 
         .plan h3 {
@@ -186,7 +192,7 @@
         /* Navigation bar links */
         .navbar a {
             float: left;
-            font-size: 16px;
+            font-size: 18px;
             color: #fff; /* White text color */
             text-align: center;
             padding: 14px 16px;
@@ -201,7 +207,8 @@
 
         /* Style the dropdown button */
         .dropdown .dropbtn {
-            font-size: 16px;
+            font-size: 18px;
+            font-family: 'Handjet', sans-serif;
             border: none;
             outline: none;
             color: #fff;
@@ -244,13 +251,16 @@
             display: block;
         }
 
+
         .center-container {
             display: flex;
             justify-content: center;
             align-items: center;
+            font-family: 'Handjet', sans-serif;
         }
 
         .custom-button {
+            font-family: 'Handjet', sans-serif;
             margin-top: 10px;
             margin-bottom: 10px;
             display: inline-block;
@@ -261,9 +271,8 @@
             border-radius: 10px; /* Add rounded corners for soft edges */
             text-align: center;
             text-decoration: none;
-            font-size: 16px;
+            font-size: 22px;
             cursor: pointer;
-            font-family:Verdana, Geneva, Tahoma, sans-serif;
         }
 
         hr {
@@ -275,12 +284,11 @@
         
         /* Global styles */
         body {
-            font-family: Arial, sans-serif;
-            background-color: #000000;
+            background-color: rgb(110, 110, 110);
             color: white;
             margin: 0;
-            padding: 15px;            
-            font-family:Verdana, Geneva, Tahoma, sans-serif;
+            padding: 15px;  
+            font-family: 'Handjet', sans-serif;          
         }
  
 
@@ -335,26 +343,28 @@
 
         .black{
             color: black;
-        }        
+        }
+
+        .containers {
+        display: flex;
+        align-items: center; /* Vertically align the content */
+        }
+
+        .image {
+            width: 80px; /* Set the desired width for your image */
+            height: 90px; /* Maintain aspect ratio */
+            margin-right: 30px; /* Add some space between the image and text */
+        }
+
         .yup {
-                display: flex;
-                justify-content: space-between;
-            }
+            display: flex;
+            justify-content: space-between;
+        }
 
               /* Style the button on hover for a slight effect */
         .custom-button:hover {
             background-color: #ffffff; /* Darken the button color */
-        }
-
-        .image {
-                width: 80px; /* Set the desired width for your image */
-                height: 90px; /* Maintain aspect ratio */
-                margin-right: 30px; /* Add some space between the image and text */
-            }
-
-        h6{
-            text-align: center;
-            font-size: 14px;
+            font-family: 'Handjet', sans-serif;
         }
 
         footer {
@@ -383,33 +393,6 @@
         .social-links a:hover img {
             opacity: 0.8;
         }
-        .packages-container {
-        display: flex;
-        justify-content: space-between;
-        background-color: #000; /* Set the background color of the entire container to black */
-        text-align: center;    
-    }
-    
-    .package {
-        flex: 1;
-        padding: 20px;
-        border: 2px solid #fff; /* Adding a white border to the packages for visibility */
-        margin: 10px;
-        background-color: #000; /* Set the background color of the packages to black */
-        }
-
-        @media (max-width: 768px) {
-        .packages-container {
-            flex-direction: column; /* Stack the packages vertically on smaller screens */
-        }
-    
-        .standard-package{
-            width: 90%; /* Take up the full width of the container on smaller screens */
-            
-        }
-    }
-
-  
     </style>
 </head>
 <body>
