@@ -2,24 +2,35 @@
 <head>
 <title>4Kael Jump Program</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Handjet:wght@100;400;600&family=Oswald:wght@300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fjalla+One&family=Handjet:wght@100;400;600&family=Oswald:wght@300&display=swap" rel="stylesheet">
+
 
 <style>
-body{
-    background-color: black;
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
-    text-align: center;
-    margin: 0;
-    padding: 0;
+    body {
+        background-color: rgb(110, 110, 110);
+        color: white;
+        margin: 0;
+        padding: 15px;  
+        font-family: 'Handjet', sans-serif;     
+        text-align: center;     
+    }
 
-}
-
-h1{
-    color: rgb(0, 0, 0);
-}
+    h1 {
+        color: #f9d069;
+        text-align: center;
+        font-family: 'Fjalla One', sans-serif;
+        font-size: 37px;
+    }
 
 .container {
     max-width: 600px;
-    margin: 100px auto;
+    text-align: center;
+    margin: 30px;
     background-color: #fff;
     padding: 20px;
     border-radius: 10px;
@@ -40,7 +51,7 @@ h1{
         text-decoration: none;
         font-size: 16px;
         cursor: pointer;
-        font-family:Verdana, Geneva, Tahoma, sans-serif;
+        font-family: 'Handjet', sans-serif;
     }
   
       /* Style the button on hover for a slight effect */
@@ -58,7 +69,7 @@ h1{
         /* Navigation bar links */
         .navbar a {
             float: left;
-            font-size: 16px;
+            font-size: 24px;
             color: #fff; /* White text color */
             text-align: center;
             padding: 14px 16px;
@@ -73,7 +84,8 @@ h1{
 
         /* Style the dropdown button */
         .dropdown .dropbtn {
-            font-size: 16px;
+            font-size: 24px;
+            font-family: 'Handjet', sans-serif;
             border: none;
             outline: none;
             color: #fff;
@@ -116,6 +128,13 @@ h1{
             display: block;
         }
 
+
+  hr {
+    border: none; /* Remove the default border */
+    background-color: rgb(0, 0, 0); /* Set the background color to white */
+    height: 2px; /* Adjust the height of the line as needed */
+    margin: 4px 0; /* Add some vertical spacing */
+  }
         footer {
             background-color: #000000;
             color: #fff;
@@ -161,12 +180,27 @@ h1{
                 h2{
                     color: white;
                     font-weight: bold;
+                    font-family: 'Handjet', sans-serif;
+
                 }
 
                 .black {
                     color: black;
                 }
 
+                .custom-font-2{
+                    font-family: 'Fjalla One', sans-serif;
+                    font-size: 20px;
+                
+                }
+                
+                .custom-font {
+                    font-family: 'Fjalla One', sans-serif;
+                }
+                .custom-font-1 {
+                    font-family: 'Handjet', sans-serif;
+                }
+                
 
 </style>
 </head>
@@ -192,20 +226,19 @@ h1{
     </div>
     <hr>
 
-            <div class="kiki">
             <div class="centered-text">
-                <h1 class="custom-font">EXCLUSIVE 4KAEL JUMP PROGRAM</h1>
-                <h2 class="custom-font"><em>Reach Higher, Jump Farther</em></h2>
-            </div>
+                <h1 class="custom-font"> Exclusive Jump Program </h1>
+                <h1 class="custom-font-2">Designed by 4kael</h1>
             </div>
     <hr>
+    <div class="centered-text">
     <div class="container">
         <h2 class="black">Which program are you interested in?</h2>
         <button id="standardButton" class="custom-button"><b>Standard Program</b></button>
         <button id="personalizedButton" class="custom-button"><b>Personalized Program</b></button>
         <button id="on1Button" class="custom-button"><b>In-Person Program</b></button>
-
     </div>
+</div>
 
     <hr>
     <footer>
