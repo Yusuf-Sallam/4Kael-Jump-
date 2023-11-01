@@ -372,9 +372,9 @@ footer {
 
   hr {
     border: none; /* Remove the default border */
-    background-color: white; /* Set the background color to white */
+    background-color: rgb(0, 0, 0); /* Set the background color to white */
     height: 2px; /* Adjust the height of the line as needed */
-    margin: 10px 0; /* Add some vertical spacing */
+    margin: 4px 0; /* Add some vertical spacing */
   }
 
   .yup {
