@@ -487,9 +487,45 @@
                        
         }
         
+
+        
+        /* Full-screen background video */
+.bg-video {
+    position: fixed; /* Fixed position */
+    right: 0;
+    bottom: 0;
+    min-width: 100%; 
+    min-height: 100%;
+    z-index: -100; /* Behind the content */
+}
+
+.content {
+    position: relative;
+    z-index: 10; /* Above the video */
+    text-align: center; /* Center the content */
+    top: 50%; /* Position at the middle of the page */
+    transform: translateY(-50%); /* Adjust for exact centering */
+    color: white; /* Text color */
+}
+
     </style>
 </head>
 <body>
+
+    <div class="bg-video">
+        <video autoplay loop muted playsinline>
+            <!-- Add your source video file below -->
+            <source src="video_1.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+
+
+
+
+
+
+
     <div class="yup">
     <div class="navbar">
         <a href="index.html">Home</a>
@@ -518,14 +554,14 @@
     <hr>
     <div class="centered-text">
 
-        <p class="black">Welcome to our ZERO GRAVITY Standard Program! We're here to 
+        <p class="white">Welcome to our ZERO GRAVITY Standard Program! We're here to 
         help you take your jumping abilities to the next level. Here's a 
         step-by-step guide on how our program works!
     </p>
 
     </div>  
 
-        <h5 class="black"><em>click on the rockets below to find out how the program works</em></h5>  
+        <h5 class="white"><em>click on the rockets below to find out how the program works</em></h5>  
     
         <hr>
         <div class="center-container" >
@@ -542,27 +578,27 @@
             <i class="fas fa-rocket" id="icon5"></i>
         </div>
         <section id="step1">
-            <h2 class="black">Step 1: Metric Assessment</h2>
+            <h2 class="white">Step 1: Metric Assessment</h2>
             
             <div class="container">
                 <img src="form.jpg" alt="Form Image" class="image">
-                <p class="black">To embark on this journey, please take a moment to 
-                    fill out our <span class="white">Metric Assessment Form</span>. This essential initial step 
+                <p class="white">To embark on this journey, please take a moment to 
+                    fill out our <span class="red">Metric Assessment Form</span>. This essential initial step 
                     guarantees that we can slightly customize your program to perfectly align 
                     with your individual requirements and aspirations. We will gather 
-                    information such as your <span class="white"> age</span>, <span class="white"></span><span class="white">height</span>, 
-                    <span class="white">weight</span>, <span class="white">maximum squat</span>, and <span class="white">more</span>.
+                    information such as your <span class="red"> age</span>, <span class="red"></span><span class="red">height</span>, 
+                    <span class="red">weight</span>, <span class="red">maximum squat</span>, and <span class="red">more</span>.
                 </p>
                 </div>
         
         </section>
         <section id="step2">
-            <h2 class="black">Step 2: Track Choosing</h2>
-            <p class="black">
+            <h2 class="white">Step 2: Track Choosing</h2>
+            <p class="white">
                 Based on the information provided in your assessment form, 
                 we will assign you to one of the following specialized tracks: 
-                <span class="white">Power</span>, <span class="white">Power/Explosiveness</span>, 
-                or <span class="white">Explosiveness</span> To explore these options further, lease 
+                <span class="red">Power</span>, <span class="red">Power/Explosiveness</span>, 
+                or <span class="red">Explosiveness</span> To explore these options further, lease 
                 click the link below.
 
             </p>
@@ -608,15 +644,15 @@
                         
         </section>
         <section id="step3">
-            <h2 class="black">Step 3: Payment Plan</h2>
+            <h2 class="white">Step 3: Payment Plan</h2>
             <div class="centered-text">
 
-            <p class="black">
-                <span class="black"><b>Subscription Plan:</b></span> PDF will be sent to 
+            <p class="white">
+                <span class="white"><b>Subscription Plan:</b></span> PDF will be sent to 
                 your email at the beginning of each month.
             </p>
-            <p class="black">                
-                <span class="black"><b>One-Time Plan:</b></span> PDF will be sent to 
+            <p class="white">                
+                <span class="white"><b>One-Time Plan:</b></span> PDF will be sent to 
                 your email at the once payment has been completed.
             </p>
              </div>
@@ -655,9 +691,9 @@
                 </div>
             </section>
         <section id="step4">
-            <h2 class="black">Step 4: Receive Your Program</h2>
+            <h2 class="white">Step 4: Receive Your Program</h2>
             <div class="centered-text">
-                <p class="black">Program materials will be sent <span class="white">via email</span> 
+                <p class="white">Program materials will be sent <span class="white">via email</span> 
                     in the form of a downloadable PDF. 
                     <br>
                     <br>
@@ -671,12 +707,12 @@
 
         <section id="step6">
             <div class="centered-text">
-            <h2 class="black">Step 5: Achieve Your Goals!</h2>
-            <p class="black">Stick with our program for great results! 
+            <h2 class="white">Step 5: Achieve Your Goals!</h2>
+            <p class="white">Stick with our program for great results! 
                 You'll jump higher, move better, and become a better athlete. 
                 Share your success stories to inspire others. 
                 </p>
-                <p class="black">Ready to get started? Take the Metric 
+                <p class="white">Ready to get started? Take the Metric 
                     Assessment and make your payment to join us on your 
                     jump journey!
                 </p>
