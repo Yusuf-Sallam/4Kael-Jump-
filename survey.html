@@ -16,8 +16,8 @@
         color: white;
         margin: 0;
         padding: 15px;  
-        font-family: 'Handjet', sans-serif;     
-        text-align: center;     
+        font-family: 'Handjet', sans-serif;    
+        text-align: center;  
     }
 
     h1 {
@@ -28,17 +28,25 @@
     }
 
 .container {
-    max-width: 600px;
+    margin: 100px;
     text-align: center;
-    margin: 30px;
+    max-width: 600px;
     background-color: #fff;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
+.center-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    min-height: calc(100vh - 30px);
+  }
 
 /* Style the button */
 .custom-button {
+        text-align: center; 
         margin-top: 10px;
         margin-bottom: 10px;
         display: inline-block;
@@ -49,18 +57,17 @@
         border-radius: 10px; /* Add rounded corners for soft edges */
         text-align: center;
         text-decoration: none;
-        font-size: 16px;
+        font-size: 20px;
         cursor: pointer;
         font-family: 'Handjet', sans-serif;
     }
   
       /* Style the button on hover for a slight effect */
-.custom-button:hover {
+        .custom-button:hover {
         background-color: #37ff00; /* Darken the button color */
 
       }
   
-
         /* Style the navigation bar */
         .navbar {
             background-color: #000; /* Black background color */
@@ -317,14 +324,14 @@
                 <h1 class="custom-font-2">Designed by 4kael</h1>
             </div>
     <hr>
-    <div class="centered-text">
-    <div class="container">
-        <h2 class="black">Which program are you interested in?</h2>
-        <button id="standardButton" class="custom-button"><b>Standard Program</b></button>
-        <button id="personalizedButton" class="custom-button"><b>Personalized Program</b></button>
-        <button id="on1Button" class="custom-button"><b>In-Person Program</b></button>
+    <div class="center-wrapper">
+        <div class="container">
+            <h2 class="black">Which program are you interested in?</h2>
+            <button id="standardButton" class="custom-button"><b>Standard Program</b></button>
+            <button id="personalizedButton" class="custom-button"><b>Personalized Program</b></button>
+            <button id="on1Button" class="custom-button"><b>In-Person Program</b></button>
+        </div>
     </div>
-</div>
 
     <hr>
     <footer>
