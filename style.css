@@ -2,7 +2,6 @@ body{
     background-color: rgb(110, 110, 110);
     justify-content: center;
     align-items: center;
-    height: 100vh;
     margin: 0;
     padding: 15px;
 }
@@ -487,93 +486,21 @@ video {
 }
 
 
-
-
-
-
-
-
-
-        #stars {
-          position: absolute;
-          width: 100%;
-          height: 100%;
-        }
-
-        .star, .rocket {
-          position: absolute;
-          width: 2px;
-          height: 2px;
-          border-radius: 50%;
-          animation: move linear infinite;
-        }
-
-        .star {
-          background: white;
-        }
-
-        .rocket {
-          width: 4px;
-          height: 15px;
-          background: linear-gradient(180deg, #ff0000, #ffff00);
-          border-radius: 2px;
-        }
-
-        .trail {
-          position: absolute;
-          width: 2px;
-          height: 30px;
-          background: linear-gradient(180deg, rgba(255,255,0,0), rgba(255,0,0,0.8));
-          animation: trailMove linear infinite;
-          opacity: 0.6;
-        }
-
-        @keyframes move {
-          0% {
-            transform: translateY(100vh);
-          }
-          100% {
-            transform: translateY(-100vh);
-          }
-        }
-
-        @keyframes trailMove {
-          0% {
-            transform: translateY(130vh);
-          }
-          100% {
-            transform: translateY(-70vh);
-          }
-        }
-
-        #content {
-          position: relative;
-          z-index: 10;
-          color: white;
-          text-align: center;
-          padding-top: 20%;
-        }
-
-
-
-
-
-
-
-
-
 /* Full-screen background video */
 .bg-video {
     position: fixed; /* Fixed position */
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%); /* Center the video exactly */
-    min-width: 100%;
-    min-height: 100%;
-    width: auto;
-    height: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
     z-index: -100; /* Behind the content */
-    background-size: cover; /* Cover the entire screen */
+    overflow: hidden; /* This will ensure any part of the video that exceeds the container will be hidden */
+}
+
+.bg-video video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure video covers the screen fully */
 }
 
 .content {
@@ -584,3 +511,5 @@ video {
     transform: translateY(-50%); /* Adjust for exact centering */
     color: white; /* Text color */
 }
+
+        
