@@ -268,9 +268,41 @@
                 h2 {
                     font-family: 'Fjalla One', sans-serif;
                 }
+                       /* Full-screen background video */
+                       .bg-video {
+                        position: fixed; /* Fixed position */
+                        right: 0;
+                        bottom: 0;
+                        min-width: 100%; 
+                        min-height: 100%;
+                        z-index: -100; /* Behind the content */
+                    }
+                    
+                    .content {
+                        position: relative;
+                        z-index: 10; /* Above the video */
+                        text-align: center; /* Center the content */
+                        top: 50%; /* Position at the middle of the page */
+                        transform: translateY(-50%); /* Adjust for exact centering */
+                        color: white; /* Text color */
+                    }
+                    
+
+
 </style>
 </head>
 <body>
+
+
+    <div class="bg-video">
+        <video autoplay loop muted playsinline>
+            <!-- Add your source video file below -->
+            <source src="video_1.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+
+
 
     <div class="yup">
     <div class="navbar">
