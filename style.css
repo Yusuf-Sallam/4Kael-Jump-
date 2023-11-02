@@ -562,14 +562,18 @@ video {
 
 
 
-        /* Full-screen background video */
+/* Full-screen background video */
 .bg-video {
     position: fixed; /* Fixed position */
-    right: 0;
-    bottom: 0;
-    min-width: 100%; 
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Center the video exactly */
+    min-width: 100%;
     min-height: 100%;
+    width: auto;
+    height: auto;
     z-index: -100; /* Behind the content */
+    background-size: cover; /* Cover the entire screen */
 }
 
 .content {
@@ -580,4 +584,3 @@ video {
     transform: translateY(-50%); /* Adjust for exact centering */
     color: white; /* Text color */
 }
-
