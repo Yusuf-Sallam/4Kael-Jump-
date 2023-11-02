@@ -78,3 +78,43 @@ document.getElementById("schedule").addEventListener("click", function () {
         // Initial display
         showGif(currentGifIndex);
 
+
+
+
+
+
+        document.addEventListener("DOMContentLoaded", function() {
+          const starField = document.getElementById('stars');
+          const numberOfStars = 150;
+          const numberOfRockets = 5; // Number of rockets
+
+          for (let i = 0; i < numberOfStars; i++) {
+            const star = document.createElement('div');
+            star.className = 'star';
+            star.style.left = `${Math.random() * 100}vw`;
+            star.style.bottom = `${Math.random() * 100}vh`;
+            star.style.animationDuration = `${Math.random() * 5 + 5}s`;
+            star.style.animationDelay = `-${Math.random() * 10}s`;
+
+            starField.appendChild(star);
+          }
+
+          for (let i = 0; i < numberOfRockets; i++) {
+            const rocket = document.createElement('div');
+            const trail = document.createElement('div');
+            
+            rocket.className = 'rocket';
+            rocket.style.left = `${Math.random() * 100}vw`;
+            rocket.style.bottom = `${Math.random() * 100}vh`;
+            rocket.style.animationDuration = `${Math.random() * 5 + 5}s`;
+            rocket.style.animationDelay = `-${Math.random() * 10}s`;
+
+            trail.className = 'trail';
+            trail.style.left = `calc(${rocket.style.left} - 1px)`;
+            trail.style.animationDuration = rocket.style.animationDuration;
+            trail.style.animationDelay = rocket.style.animationDelay;
+            
+            starField.appendChild(trail);
+            starField.appendChild(rocket);
+          }
+        });
