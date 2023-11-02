@@ -510,10 +510,37 @@
                     }
                        
         }
-        
+                 /* Full-screen background video */
+.bg-video {
+    position: fixed; /* Fixed position */
+    right: 0;
+    bottom: 0;
+    min-width: 100%; 
+    min-height: 100%;
+    z-index: -100; /* Behind the content */
+}
+
+.content {
+    position: relative;
+    z-index: 10; /* Above the video */
+    text-align: center; /* Center the content */
+    top: 50%; /* Position at the middle of the page */
+    transform: translateY(-50%); /* Adjust for exact centering */
+    color: white; /* Text color */
+}
+       
     </style>
 </head>
 <body>
+
+    <div class="bg-video">
+        <video autoplay loop muted playsinline>
+            <!-- Add your source video file below -->
+            <source src="video_1.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+
 
     <div class="yup">
     <div class="navbar">
@@ -548,13 +575,13 @@
             <i class="fas fa-rocket" id="icon3"></i>
         </div>
         <section id="step1">
-            <h2 class="black">Step 1: Metric Assessment</h2>
+            <h2 class="white">Step 1: Metric Assessment</h2>
             <div id="ff-compose"></div>
             <script async defer src="https://formfacade.com/include/102452761580912996464/form/1FAIpQLSfvJlPQaUX-u4rgTdqODWtxphY-hbfYaW2vET086dBvwxqFrQ/classic.js?div=ff-compose"></script>
 
         </section>
         <section id="step2">
-            <h2 class="black">Step 2: Payment Plan</h2>
+            <h2 class="white">Step 2: Payment Plan</h2>
 
             <div class="tabs">
                 <div class="tab active" onclick="showMonthly()"><h4 class="white">Subscription Plan</h4></div>
@@ -598,9 +625,9 @@
 
         </section>
         <section id="step3">
-            <h2 class="black">Congrats!</h2>
+            <h2 class="white">Congrats!</h2>
             <div class="centered-text">           
-                <p class="black">Thank you for choosing our 4Kael Standard Program! Here's what to expect next:</p>
+                <p class="white">Thank you for choosing our 4Kael Standard Program! Here's what to expect next:</p>
                 </div>
                 <div class="yup">
                     <div class="slider-container">
