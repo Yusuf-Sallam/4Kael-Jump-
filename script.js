@@ -22,16 +22,17 @@ document.getElementById("schedule").addEventListener("click", function () {
 });
 
 
-        // JavaScript function to toggle the visibility of content
-        function toggleSection(sectionId) {
-            var content = document.getElementById(sectionId);
-            if (content.style.display === "none") {
-                content.style.display = "block";
-            } else {
-                content.style.display = "none";
-            }
-        }
-
+// JavaScript function to toggle the visibility of content
+function toggleSection(sectionId, sectionElement) {
+    var content = document.getElementById(sectionId);
+    if (content.style.display === "none" || content.style.display === "") {
+        content.style.display = "block";
+        sectionElement.classList.add("active"); // Add a class to indicate the section is open
+    } else {
+        content.style.display = "none";
+        sectionElement.classList.remove("active"); // Remove the class when closing the section
+    }
+}
 
         const gifContainer = document.querySelector('.gif-container');
         const navigation = document.querySelector('.navigation');
@@ -77,6 +78,3 @@ document.getElementById("schedule").addEventListener("click", function () {
 
         // Initial display
         showGif(currentGifIndex);
-
-
-
