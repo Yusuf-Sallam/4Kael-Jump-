@@ -54,6 +54,11 @@ p{
     color: red;
 }
 
+.top_1 {
+    margin-top: 40px;
+    padding-top: 60px;
+}
+
 
 video {
     width: 100%;
@@ -218,7 +223,6 @@ footer {
             cursor: pointer;
         }
 
-
     }
     
 
@@ -295,12 +299,8 @@ footer {
 }
 
 
-
-
-
-
 .top {
-    margin-top: 20px;
+    margin-top: 80px;
     padding-top: 60px;
 }
 
@@ -405,14 +405,16 @@ video {
     display: block; /* Remove any default inline spacing */
 }
 
-@media screen and (max-width: 600px) {
+@media only screen and (max-width: 600px) {
     .video-container {
         width: 100%;
     }
 
-}
+    .top {
+    margin-top: 20px;
+    padding-top: 60px;
+    }
 
-@media only screen and (max-width: 600px) {
     .centered-text img {
         width: 129px;
         height: 24px;
@@ -492,13 +494,16 @@ video {
                 justify-content: space-between;
                 background-color: #000; /* Set the background color of the entire container to black */
                 text-align: center;  
-                margin-left: 30px;
-                margin-right: 30px;  
+                margin-left: 5px;
+                margin-right: 5px;  
             }
+            .top {
+                margin-top: 20px;
+                padding-top: 60px;
+            }
+            
                
 }
-
-
 /* Full-screen background video */
 .bg-video {
     position: fixed; /* Fixed position */
@@ -526,3 +531,6 @@ video {
 }
 
         
+
+
+
